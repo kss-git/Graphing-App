@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Function Plotter</h2>
+
+    <form method="POST">
+        <label>Enter function of x (example: x**2, np.sin(x))</label><br><br>
+        <input type="text" name="function" style="width:300px;">
+        <button type="submit">Plot</button>
+    </form>
+
+    {% if graph_url %}
+        <h3>Graph:</h3>
+        <img src="data:image/png;base64,{{ graph_url }}">
+    {% endif %}
+</body>
+</html>
